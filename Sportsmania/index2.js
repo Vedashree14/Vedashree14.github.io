@@ -8,7 +8,7 @@ const canvas = document.querySelector('.webgl')
 const scene =  new THREE.Scene()
 
 //new
-let clock, mixer, model, controls
+let clock, mixer, model
 clock = new THREE.Clock()
 //new
 
@@ -151,8 +151,8 @@ function onMouseMove(event) {
 
 function onTouchMove(event) {
   const touch = event.touches[0];
-  mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = (touch.clientY / window.innerHeight) * 2 - 1;
+  mouse.x = (touch.clientX / window.innerWidth) * 1 - 1;
+  mouse.y = (touch.clientY / window.innerHeight) * 1 - 1;
   handleMouseMovement(mouse.x, mouse.y, cameraOrientationState);
 }
 
@@ -190,68 +190,16 @@ function animate() {
   
     renderer.render(scene, camera)
   }
-  animate()
+  animate();
 
 
 
 
 
-  //2nd part countdown
-  const blob = document.getElementById("blob");
-
-window.onpointermove = event => { 
-  const { clientX, clientY } = event;
   
-  blob.animate({
-    left: `${clientX}px`,
-    top: `${clientY}px`
-  }, { duration: 3000, fill: "forwards" });
-}
 
 //countdown js
-(function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "02/07/",
-      birthday = dayMonth + yyyy;
-  
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
-  //end
-  
-  const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
-
-        const now = new Date().getTime(),
-              distance = countDown - now;
-
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-        //do something later when date is reached
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "Let the game Begin!!!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());
 
 
   const isSmallScreen = sizes.width < 768; // Adjust the threshold as needed
