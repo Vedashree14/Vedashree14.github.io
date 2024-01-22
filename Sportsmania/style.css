@@ -16,6 +16,14 @@ nav {
     padding: 40px;*/
   
   }
+
+  .navbar-nav{
+    margin-left: 70%;
+    font-size: 1.2rem;
+  }
+  .nav1{
+    right: 20%;
+  }
 .nav1:hover{    
     background-color: transparent; 
 }
@@ -28,20 +36,23 @@ nav {
 } 
 
 
+
+/*preloader css*/
+
 body {
   background-image: url("assets/Untitled design (13)_pc.png");
-
+  background-color: black;
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh; /* Ensure the background covers the entire viewport height */
+  height: 80vh; /* Ensure the background covers the entire viewport height */
   margin: 0;
 }
 
 .countdown{
   top: 31vh;
   height: 66vh;
-  width: 124vw;
+  width: 100%;
   position: relative;
   background-image: url("assets/Untitled design (12) (2).png");
  
@@ -68,7 +79,7 @@ h6 {
   
   position:relative;
   top: 7.5vw;
-  left: -10.5%;
+  left: -1%;
   text-align: center;
 }
 
@@ -87,7 +98,7 @@ ul.date li span {
   font-size: 4.5rem;
 }
 
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   ul.date li {
     font-size: calc(1.125rem * var(--smaller));
   }
@@ -307,6 +318,7 @@ ul.date li span {
 }
 
 
+
 @media all and (max-width: 768px) {
   body {
     background-attachment: scroll; /* or unset, depending on your preference */
@@ -333,15 +345,7 @@ ul.date li span {
     left: 0; /* adjust based on your design */
   }
 
-  ul.date li {
-    /* adjust font sizes and padding based on your design */
-  }
-
-  ul.date li span {
-    /* adjust font sizes based on your design */
-  }
-
-  /* ... other styles for smaller screens ... */
+ 
 }
 
 
@@ -366,4 +370,20 @@ body, html {
 body {
   overflow-x: hidden;
 }
+
+
+@media screen and (max-width: 900px) {
+  body {
+    background-image: url("assets/Untitled design (13).png");
+    background-color: black;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%; /* Ensure the background covers the entire viewport height */
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
 
