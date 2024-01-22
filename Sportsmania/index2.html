@@ -26,55 +26,96 @@
   <script src="ConstellanimePart2(interact)js.js"></script>
 -->
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!--preloader-->
+<div id="loading-overlay">
+  <iframe width="100%" height="100%" src="assets/WhatsAppVideo2024-01-18at06.43.29-ezgif.com-crop (1).gif" frameborder="0" allowfullscreen></iframe>
+</div>
+<script>
+  window.addEventListener('load', function () {
+            // Display loading video for 5 seconds (5000 milliseconds)
+            setTimeout(function () {
+                document.getElementById('loading-overlay').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 5000);
+  });
+</script>
+<style>
+#loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Adjust the background color as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#loading-overlay iframe {
+  width: 100%; /* Adjust the width as needed */
+  height: 100%; /* Adjust the height as needed */
+  margin-left: 43%;
+  margin-top: 25%;
+}
+
+#main-content {
+  display: none;
+}
+
+@media (max-width: 768px) {
+    #loading-overlay iframe {
+        width: 100%; /* Adjust for smaller screens */
+        height: 100%; /* Adjust for smaller screens */
+        margin-left: 15%; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    #loading-overlay iframe {
+        width: 95%; /* Further adjustment for smaller screens */
+        height: 95%; /* Further adjustment for smaller screens */
+        margin-left: 2.5%; /* Further adjustment for smaller screens */
+        
+    }
+}
+</style>
+
   <div id="part1">
     <nav class = "navbar fixed-top navbar-expand-sm navbar-dark">
-      <div class="container">
+      <div class="container-fluid">
       <a
-        href="#"
+        href="index2.html"
         class="navbar-brand mb-0 h1">
           <img 
           class="d-inline-block align-top"
           src="assets\WhatsApp_Image_2024-01-11_at_06.41.54_Resize-removebg-preview.png"
           alt="Logo"
-          width="75" height="75"
-          style ="position:absolute; left:70px; top:16px;">
+          width="75" height="75">
       </a>
-      <button
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      class="navbar-toggler"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      >
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="#ev" class="nav-link" style = "position:absolute; right:550px; top:27px; scroll-behavior: smooth;">
-              <p class="nav1" style="font-size:1.3em; ">EVENTS</p> 
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#auinfo" class="nav-link" style = "position:absolute; right:410px; top:27px ">
-              <p class="nav1" style="font-size:1.3em">ABOUT</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Gallery.html" class="nav-link" style = "position:absolute; right:260px; top:27px">
-              <p class="nav1" style="font-size:1.3em">GALLERY</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Contact Us.html" class="nav-link" style = "position:absolute; right:115px; top:27px">
-              <p class="nav1" style="font-size:1.3em">CONTACT</p>
-            </a>
-          </li>
-        </ul>
-    </div>
-  </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" id="nav1">
+              <a class="nav-link active" aria-current="page" href="#events">EVENTS</a>
+            </li>
+            <li class="nav-item" id="nav2">
+              <a class="nav-link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item" id="nav3">
+              <a class="nav-link" href="Gallery.html" tabindex="-1">GALLERY</a>
+            </li>
+            <li class="nav-item" id="nav4">
+              <a class="nav-link" href="Contact Us.html" tabindex="-1">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
 
   
   
@@ -89,7 +130,7 @@
     
     <div class="countdown" >
       
-      <h6 style="color:aliceblue;font-family: 'Kanit', sans-serif; font-weight: 700; font-size: 3vw; top: 24%; left:35%";>BEGINS IN</h6>
+      <h6 style="color:aliceblue;font-family: 'Kanit', sans-serif; font-weight: 700; font-size: 3vw; top: 24%; left:43%";>BEGINS IN</h6>
 
       <div class="container2">
         
@@ -147,7 +188,7 @@
 
     <div class="events">
 
-      <div class="container3" id="box" style="left: 100px; top: 80px;" data-flip-container>
+      <div class="container3" id="box" style="left: 100px; top: 45px;" data-flip-container>
         <div class="flipper">s
           <div class="front">
             <img class="eventimg" src="assets/eventimg/Basketball (1).jpg" alt="" />
@@ -164,7 +205,7 @@
       </div>
       
 
-      <div class="container3" id="box" style="left: 575px; top: -240px;" data-flip-container>
+      <div class="container3" id="box" style="left: 575px; top: -245px;" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/throwball (1).jpg" alt="" />
@@ -194,7 +235,7 @@
         </div>
       </div>
 
-      <div class="container3" id="box" style="left: 100px; top: -500px;" data-flip-container>
+      <div class="container3" id="box" style="left: 100px; top: -510px;" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/kabaddi (1).jpg" alt="" />
@@ -208,7 +249,7 @@
         </div>
       </div>
 
-      <div class="container3" id="box" style="left: 575px; top: -820px;" data-flip-container>
+      <div class="container3" id="box" style="left: 575px; top: -825px;" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/eventimg/long football (1).jpg" alt="" />
@@ -236,7 +277,7 @@
         </div>
       </div>
 
-      <div class="container3" id="box" style="left: 100px; top: -1080px;" data-flip-container>
+      <div class="container3" id="box" style="left: 100px; top: -1090px;" data-flip-container>
         <div class="flipper">
           <div class="front">
             <img class="eventimg" src="assets/240_F_9986762_PJ3v5iQbokfmRCIJm0Ep8uesCHqN7vWN.jpg" alt="" />
@@ -281,7 +322,12 @@
 </div>
 
 
+<footer>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
 
-    
+
 </body>
+
 </html>
